@@ -15,6 +15,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
+//Initialize the smtp transporter
 let smtpTransport = nodemailer.createTransport({
 	host: config.mailserver.host,
 	port: config.mailserver.port,
@@ -25,9 +26,11 @@ let smtpTransport = nodemailer.createTransport({
 	}
 });
 
+//Post route that takes in the info and sends the email
 app.post(
 	"/",
 	[
+		//Validate the post data
 		check("email")
 			.not()
 			.isEmpty()
@@ -48,8 +51,7 @@ app.post(
 			})
 	],
 	function(req, res) {
-		console.log(req.query);
-
+		//Return 422 status if there are validation errors
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
 			return res.status(422).json({
@@ -57,6 +59,7 @@ app.post(
 			});
 		}
 
+		//Set up the parameters from the post data
 		let mailParameters = {
 			to: config.message.toAdress,
 			subject: config.message.subject,
@@ -76,7 +79,7 @@ app.post(
 				"</p>"
 		};
 
-		console.log(mailParameters);
+		//Send the mail according set parameters
 		smtpTransport.sendMail(mailParameters, function(err, response) {
 			if (err) {
 				console.log(err);
@@ -94,6 +97,7 @@ app.post(
 	}
 );
 
+//Starting webserver
 app.listen(config.webServer.port, function(err) {
 	if (err) {
 		console.log(err);
