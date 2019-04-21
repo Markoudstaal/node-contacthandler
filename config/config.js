@@ -1,26 +1,26 @@
-var config = {
+const config = {
     mailserver = {
         //The smtp server host
-        host = "hostname",
+        host: "hostname",
         //The smtp port
-        port = 465,
+        port: 465,
         //Secure or not. True for port 465, false for all other ports
-        secure = true,
+        secure: true,
         //Smtp server login information
-        user = "user",
-        password = "password"
+        user: "user",
+        password: "password"
     },
     message = {
         //What email adres do you want to send the message to
-        toAdress = "",
+        toAdress: "",
         //Subject of the email
-        subject = "",
+        subject: "",
         //The adress the email should come from
-        fromAdress = ""
+        fromAdress: ""
     },
     webServer = {
         //Port you want the API to run on
-        port = 3333
+        port: 3333
     }
 };
 
