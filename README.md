@@ -14,11 +14,7 @@ Then run `npm install` in the newly created folder.
 
 Next make sure to change the config at `/config/conig.js`
 
-Lastly start the server with:
-
-```
-npm start
-```
+Lastly start the server with `npm start`
 
 ## Usage
 
@@ -29,5 +25,5 @@ Pass the POST data in JSON to the server as follows:
   name: "full name",
   phone: "phone number",
   email: "users email",
-  message: "users message
+  message: "users message"
 }
