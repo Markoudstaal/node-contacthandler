@@ -19,3 +19,15 @@ Lastly start the server with:
 ```
 npm start
 ```
+
+## Usage
+
+Pass the POST data in JSON to the server as follows:
+
+```
+{
+  name: "full name",
+  phone: "phone number",
+  email: "users email",
+  message: "users message
+}
