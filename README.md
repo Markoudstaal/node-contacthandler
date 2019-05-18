@@ -30,6 +30,7 @@ $message = Client message
 ```
 
 HTML is allowed in this string
+
 Example: `"<p>New email by $name, $email, $phone: $message</p>"`
 
 Pass the POST data in JSON to the server as follows:
