@@ -16,7 +16,18 @@ const config = {
 		//Subject of the email
 		subject: "",
 		//The adress the email should come from
-		fromAdress: ""
+		fromAdress: "",
+		/* The content of the email. HTML is allowed and will work.
+		Add information by using the following:
+
+		$name = Client name
+		$email = Client email
+		$phone = Client phonenumber
+		$message = Client message
+
+		Example: "New email by $name, $email, $phone: $message"
+		*/
+		content = "" 
 	},
 	webServer: {
 		//Port you want the API to run on

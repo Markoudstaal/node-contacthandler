@@ -4,6 +4,7 @@ let bodyParser = require("body-parser");
 let cors = require("cors");
 const { check, validationResult } = require("express-validator/check");
 const config = require("./config/config.js");
+import "./bin/lib";
 
 let app = express();
 
@@ -65,18 +66,12 @@ app.post(
 			subject: config.message.subject,
 			from: config.message.fromAdress,
 			replyTo: req.body.email,
-			html:
-				"<p>From: " +
-				req.body.name +
-				" , " +
-				req.body.phone +
-				" <br> " +
-				"User email: " +
-				req.body.email +
-				" <br> " +
-				"Bericht: </p><p>" +
-				req.body.message +
-				"</p>"
+			html: getMessageFromDetails(
+				req.body.name,
+				req.body.email,
+				req.body.phone,
+				req.body.message
+			)
 		};
 
 		//Send the mail according set parameters
