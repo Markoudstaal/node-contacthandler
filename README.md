@@ -23,10 +23,10 @@ Setup the config file in config/config.js
 The email send can be customized by adding the following parameters to \$emailContent:
 
 ```
-		$name = Client name
-    $phone = Client phonenumber
-		$email = Client email
-		$message = Client message
+$name = Client name
+$phone = Client phonenumber
+$email = Client email
+$message = Client message
 ```
 
 Example: `New email by $name, $email, $phone: $message`
