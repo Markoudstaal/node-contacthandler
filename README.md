@@ -4,7 +4,7 @@ This app uses nodemailer in NodeJS to take post data from your contact form and 
 
 ## Installation
 
-To install clone the repository with the following code:
+To install clone the repository as follows:
 
 ```
 git clone https://github.com/Markoudstaal/node-contacthandler.git
@@ -18,6 +18,19 @@ Lastly start the server with `npm start`
 
 ## Usage
 
+Setup the config file in config/config.js
+
+The email send can be customized by adding the following parameters to \$emailContent:
+
+```
+		$name = Client name
+    $phone = Client phonenumber
+		$email = Client email
+		$message = Client message
+```
+
+Example: `New email by $name, $email, $phone: $message`
+
 Pass the POST data in JSON to the server as follows:
 
 ```
@@ -27,3 +40,4 @@ Pass the POST data in JSON to the server as follows:
   email: "users email",
   message: "users message"
 }
+```
