@@ -18,9 +18,9 @@ Lastly start the server with `npm start`
 
 ## Usage
 
-Setup the config file in config/config.js
+Setup the config file in `/config/config.js`
 
-The email send can be customized by adding the following parameters to \$emailContent:
+The email content can be customized by adding the following parameters to `$emailContent`:
 
 ```
 $name = Client name
@@ -29,7 +29,8 @@ $email = Client email
 $message = Client message
 ```
 
-Example: `New email by $name, $email, $phone: $message`
+HTML is allowed in this string
+Example: `"<p>New email by $name, $email, $phone: $message</p>"`
 
 Pass the POST data in JSON to the server as follows:
 
