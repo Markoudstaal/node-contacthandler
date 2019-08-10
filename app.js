@@ -4,7 +4,7 @@ let bodyParser = require("body-parser");
 let cors = require("cors");
 const { check, validationResult } = require("express-validator/check");
 const config = require("./config/config.js");
-import "./bin/lib";
+let lib = require("./bin/lib");
 
 let app = express();
 
@@ -66,7 +66,7 @@ app.post(
 			subject: config.message.subject,
 			from: config.message.fromAdress,
 			replyTo: req.body.email,
-			html: getEmailContentFromDetails(
+			html: lib.getEmailContentFromDetails(
 				req.body.name,
 				req.body.email,
 				req.body.phone,
