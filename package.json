@@ -1,16 +1,18 @@
 {
-  "name": "emailhandler",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "nodemon app.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "express": "~4.16.0",
-    "express-validator": "^5.3.1",
-    "nodemailer": "^6.1.0",
-    "nodemon": "^1.18.11"
-  }
+	"name": "emailhandler",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "nodemon app.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"cors": "^2.8.5",
+		"express": "~4.16.0",
+		"express-validator": "^5.3.1",
+		"nodemailer": "^6.1.0",
+		"nodemon": "^1.18.11",
+		"babel-cli": "^6.0.0",
+		"babel-preset-es2015": "^6.0.0"
+	}
 }

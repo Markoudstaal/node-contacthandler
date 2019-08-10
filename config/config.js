@@ -27,7 +27,7 @@ const config = {
 
 		Example: "New email by $name, $email, $phone: $message"
 		*/
-		emailContent = "" 
+		emailContent: ""
 	},
 	webServer: {
 		//Port you want the API to run on
