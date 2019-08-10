@@ -33,6 +33,8 @@ HTML is allowed in this string
 
 Example: `"<p>New email by $name, $email, $phone: $message</p>"`
 
+Each parameter can only be used once except for $email which can be used twice. Unlimited usage will be added soon.
+
 Pass the POST data in JSON to the server as follows:
 
 ```
