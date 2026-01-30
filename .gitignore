@@ -3,3 +3,5 @@ node_modules/
 
 //Ignor vscode files
 .vscode/
+
+.env
