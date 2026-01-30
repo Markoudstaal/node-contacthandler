@@ -31,21 +31,13 @@ app.get('/', (req, res) => {
 app.post(
   "/",
   function (req, res) {
-    //Return 422 status if there are validation errors
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(422).json({
-        errors: errors.array()
-      });
-    }
-
     //Set up the parameters from the post data
     let mailParameters = {
-      to: config.message.toAdress,
-      subject: config.message.subject,
-      from: config.message.fromAdress,
+      to: process.env.TO_EMAIL,
+      subject: "Bericht via contact formulier",
+      from: process.env.FROM_EMAIL,
       replyTo: req.body.email,
-      html: lib.getEmailContentFromDetails(
+      html: getEmailContentFromDetails(
         req.body.name,
         req.body.email,
         req.body.phone,

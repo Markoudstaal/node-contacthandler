@@ -7,7 +7,7 @@ module.exports.getEmailContentFromDetails = function (
   phone,
   message
 ) {
-  let defaultContent = config.message.emailContent;
+  let defaultContent = process.env.EMAIL_CONTENT;
   let emailContent = defaultContent.replace("$name", name);
   emailContent = emailContent.replace("$email", email);
   emailContent = emailContent.replace("$email", email);
